@@ -1,0 +1,17 @@
+services:
+  db:
+    image: mariadb:10.5.19
+    container_name: mariadb-srv
+    environment:
+      MYSQL_ROOT_PASSWORD: inn.Wua!
+      MYSQL_DATABASE: argos_sdp
+      MYSQL_USER: argoswuai
+      MYSQL_PASSWORD: inn.Wua!
+
+#    volumes:
+#      - ./data:/var/lib/mysql
+#      - ./ssl:/etc/mysql/ssl
+#      - ./config:/etc/mysql
+    ports:
+      - "3306:3306"
+#    command: --ssl-ca=/etc/mysql/ssl/ca-cert.pem --ssl-cert=/etc/mysql/ssl/mariadb-srv-cert.pem --ssl-key=/etc/mysql/ssl/mariadb-srv-key.pem
